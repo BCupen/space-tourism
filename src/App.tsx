@@ -1,10 +1,11 @@
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="font-default max-w-[1440px] min-h-screen bg-navy flex justify-center mx-auto">
-      Space Tourism
+    <div className="font-default w-full min-h-screen bg-navy flex flex-col items-center mx-auto">
+      <Home />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
