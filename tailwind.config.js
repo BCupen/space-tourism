@@ -9,7 +9,8 @@ export default {
       },
       fontFamily: {
         default: ["Bellefair"],
-        nav: ['Barlow'],
+        sub: ['Barlow Condensed'],
+        body: ['Barlow']
       },
       backgroundImage: {
         "destination-desktop":
