@@ -18,9 +18,9 @@ export const DestinationDetails = () => {
       <img
         src={imageUrl}
         alt={destinationData[selectedDestinationIndex].name}
-        className="w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px]"
+        className="mx-7 w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px]"
       />
-      <div>
+      <div className="md:px-8">
         <TabSection
           selectedDestinationIndex={selectedDestinationIndex}
           setSelectedDestinationIndex={setSelectedDestinationIndex}

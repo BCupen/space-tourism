@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import { Destinations } from "./pages/Destinations";
 import { NavLinkProvider } from "./components/NavLinkProvider";
+import { Crew } from "./pages/Crew";
 
 function App() {
   return (
@@ -9,10 +10,8 @@ function App() {
       <NavLinkProvider>
         <Routes>
           <Route path="/space-tourism/" element={<Home />} />
-          <Route
-            path="/space-tourism/destination"
-            element={<Destinations />}
-          />
+          <Route path="/space-tourism/destination" element={<Destinations />} />
+          <Route path="/space-tourism/crew" element={<Crew />} />
         </Routes>
       </NavLinkProvider>
     </div>

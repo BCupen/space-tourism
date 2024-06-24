@@ -43,7 +43,7 @@ const NavBar = () => {
             <p>Destination</p>
           </li>
         </Link>
-        <Link to="/space-tourism/" onClick={() => setActiveLink("Crew")}>
+        <Link to="/space-tourism/crew" onClick={() => setActiveLink("Crew")}>
           <li
             className={`${navLiStyle} ${
               activeLink === "Crew"
@@ -107,7 +107,7 @@ const NavBar = () => {
             <p>Destination</p>
           </li>
         </Link>
-        <Link to="/space-tourism/" onClick={() => setActiveLink("Crew")}>
+        <Link to="/space-tourism/crew" onClick={() => setActiveLink("Crew")}>
           <li
             className={`${navLiStyleMobile} ${
               activeLink === "Crew"
