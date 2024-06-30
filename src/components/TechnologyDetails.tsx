@@ -26,8 +26,8 @@ export const TechnologyDetails = () => {
               opacity: 1,
             }}
             transition={{
-              delay: 0.25,
               duration: 1,
+              delay: 0.25,
             }}
             onClick={() => setSelectedIndex(0)}
             className={`${
@@ -48,8 +48,8 @@ export const TechnologyDetails = () => {
               opacity: 1,
             }}
             transition={{
-              delay: 0.5,
               duration: 1,
+              delay: 0.5,
             }}
             onClick={() => setSelectedIndex(1)}
             className={`${
@@ -70,8 +70,8 @@ export const TechnologyDetails = () => {
               opacity: 1,
             }}
             transition={{
-              delay: 0.75,
               duration: 1,
+              delay: 0.75,
             }}
             onClick={() => setSelectedIndex(2)}
             className={`${
@@ -110,20 +110,7 @@ export const TechnologyDetails = () => {
           </p>
         </motion.div>
       </div>
-      <motion.div
-        key={techData[selectedIndex].name}
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 2,
-          delay: 0.25,
-        }}
-        className="lg:w-[50%] w-full"
-      >
+      <div className="lg:w-[50%] w-full">
         <img
           src={imageUrlLandscape}
           alt={techData[selectedIndex].name}
@@ -134,7 +121,7 @@ export const TechnologyDetails = () => {
           alt={techData[selectedIndex].name}
           className="hidden w-[100vw] lg:block object-scale-down lg:object-right"
         />
-      </motion.div>
+      </div>
     </div>
   );
 };
