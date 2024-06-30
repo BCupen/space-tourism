@@ -14,25 +14,25 @@ export default {
       },
       backgroundImage: {
         "destination-desktop":
-          'url("./src/assets/destination/background-destination-desktop.jpg")',
+          `url("/space-tourism/background-destination-desktop.jpg")`,
         "destination-tablet":
-          'url("./src/assets/destination/background-destination-tablet.jpg")',
+          `url("/space-tourism/background-destination-tablet.jpg")`,
         "destination-mobile":
-          'url("./src/assets/destination/background-destination-mobile.jpg")',
+          `url("/space-tourism/background-destination-mobile.jpg")`,
 
-        "crew-desktop": 'url("./src/assets/crew/background-crew-desktop.jpg")',
-        "crew-tablet": 'url("./src/assets/crew/background-crew-tablet.jpg")',
-        "crew-mobile": 'url("./src/assets/crew/background-crew-mobile.jpg")',
+        "crew-desktop": `url("/space-tourism/background-crew-desktop.jpg")`,
+        "crew-tablet": `url("/space-tourism/background-crew-tablet.jpg")`,
+        "crew-mobile": `url("/space-tourism/background-crew-mobile.jpg")`,
 
-        "home-desktop": 'url("./src/assets/home/background-home-desktop.jpg")',
-        "home-tablet": 'url("./src/assets/home/background-home-tablet.jpg")',
-        "home-mobile": "url('./src/assets/home/background-home-mobile.jpg')",
+        "home-desktop": `url("/space-tourism/background-home-desktop.jpg")`,
+        "home-tablet": `url("/space-tourism/background-home-tablet.jpg")`,
+        "home-mobile": `url("/space-tourism/background-home-mobile.jpg")`,
         "technology-desktop":
-          'url("./src/assets/technology/background-technology-desktop.jpg")',
+          `url("/space-tourism/background-technology-desktop.jpg")`,
         "technology-tablet":
-          'url("./src/assets/technology/background-technology-tablet.jpg")',
+          `url("/space-tourism/background-technology-tablet.jpg")`,
         "technology-mobile":
-          'url("./src/assets/technology/background-technology-mobile.jpg")',
+          `url("/space-tourism/background-technology-mobile.jpg")`,
       },
     },
   },
