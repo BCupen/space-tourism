@@ -76,7 +76,7 @@ const NavBar = () => {
 
       {/* Mobile Nav */}
       {showMenu && (
-        <div className="fixed top-0 right-0 w-2/3 h-screen md:hidden flex flex-col gap-12 bg-navy bg-opacity-10 backdrop-blur-md p-6">
+        <div className="z-10 fixed top-0 right-0 w-2/3 h-screen md:hidden flex flex-col gap-12 bg-navy bg-opacity-10 backdrop-blur-md p-6">
           <button className="self-end" onClick={() => setShowMenu(false)}>
             <Close />
           </button>
