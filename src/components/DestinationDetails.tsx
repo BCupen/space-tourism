@@ -26,18 +26,28 @@ export const DestinationDetails = () => {
           setSelectedDestinationIndex={setSelectedDestinationIndex}
         />
         <div className="flex flex-col gap-4 text-white text-center lg:text-left pb-6 lg:pb-10 border-b border-white border-opacity-50">
-            <h1 className="uppercase font-default text-[56px] md:text-[80px] lg:text-[96px]">{destinationData[selectedDestinationIndex].name}</h1>
-            <p className="max-w-md font-body text-[16px] lg:text-[16px] leading-[180%]">{destinationData[selectedDestinationIndex].description}</p>
+          <h1 className="uppercase font-default text-[56px] md:text-[80px] lg:text-[96px]">
+            {destinationData[selectedDestinationIndex].name}
+          </h1>
+          <p className="max-w-md font-body text-[16px] lg:text-[16px] leading-[180%]">
+            {destinationData[selectedDestinationIndex].description}
+          </p>
         </div>
         <div className="w-full py-6 lg:py-8 uppercase text-white flex flex-col gap-6 md:flex-row">
-            <span className="w-full md:w-[50%] text-center lg:text-left">
-                <p className="text-[14px] tracking-[2px] font-sub">Avg. Distance</p>
-                <h3 className="text-[28px] font-default">{destinationData[selectedDestinationIndex].distance}</h3>
-            </span>
-            <span className="w-full md:w-[50%] text-center lg:text-left">
-                <p className="text-[14px] tracking-[2px] font-sub">Est. Travel Time</p>
-                <h3 className="text-[28px] font-default">{destinationData[selectedDestinationIndex].travel}</h3>
-            </span>
+          <span className="w-full md:w-[50%] text-center lg:text-left">
+            <p className="text-[14px] tracking-[2px] font-sub">Avg. Distance</p>
+            <h3 className="text-[28px] font-default">
+              {destinationData[selectedDestinationIndex].distance}
+            </h3>
+          </span>
+          <span className="w-full md:w-[50%] text-center lg:text-left">
+            <p className="text-[14px] tracking-[2px] font-sub">
+              Est. Travel Time
+            </p>
+            <h3 className="text-[28px] font-default">
+              {destinationData[selectedDestinationIndex].travel}
+            </h3>
+          </span>
         </div>
       </div>
     </div>
@@ -52,8 +62,13 @@ const TabSection = ({
     <ul className="flex gap-8 justify-center lg:justify-start">
       {destinationData.map((destination, index) => (
         <li
-          className={`cursor-pointer uppercase text-white font-sub py-3 text-[14px] md:text-[16px] tracking-[2px] border-b-4 ${selectedDestinationIndex === index ? "border-white" : "border-transparent hover:border-white hover:border-opacity-50"} transition-colors duration-700 ease-in-out`}
-            onClick={() => setSelectedDestinationIndex(index)}
+          key={destination.name}
+          className={`cursor-pointer uppercase text-white font-sub py-3 text-[14px] md:text-[16px] tracking-[2px] border-b-4 ${
+            selectedDestinationIndex === index
+              ? "border-white"
+              : "border-transparent hover:border-white hover:border-opacity-50"
+          } transition-colors duration-700 ease-in-out`}
+          onClick={() => setSelectedDestinationIndex(index)}
         >
           {destination.name}
         </li>

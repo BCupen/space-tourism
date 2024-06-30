@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+import { useNavLink } from "./NavLinkProvider";
+
 export const HeroSection = () => {
+  const { setActiveLink} = useNavLink();
   return (
     <div className="max-w-[1440px] h-[75%] flex flex-col justify-between lg:flex-row lg:items-end mx-auto p-6 md:p-16 lg:p-32">
       <div className="w-full lg:w-[50%] text-white text-center lg:text-left">
@@ -12,9 +16,12 @@ export const HeroSection = () => {
         </p>
       </div>
       <div className="w-full lg:w-[50%] flex justify-center items-center">
-        <button className="w-[144px] h-[144px] md:w-[272px] md:h-[272px] bg-white rounded-full ring-[88px] ring-transparent hover:ring-white hover:ring-opacity-10 transition-shadow duration-700 ease-in-out">
+        <Link to="/space-tourism/destination">
+        <button onClick={() => setActiveLink('Destination')} className="w-[144px] h-[144px] md:w-[272px] md:h-[272px] bg-white rounded-full ring-[88px] ring-transparent hover:ring-white hover:ring-opacity-10 transition-shadow duration-700 ease-in-out">
           <p className="uppercase text-navy text-[18px] md:text-[32px]">Explore</p>
         </button>
+        </Link>
+        
       </div>
     </div>
   );

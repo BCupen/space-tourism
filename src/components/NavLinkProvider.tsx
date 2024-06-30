@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 interface NavLinkType {
     activeLink: string;
@@ -8,7 +9,18 @@ interface NavLinkType {
 const NavLinkContext = createContext<NavLinkType>({ activeLink: "", setActiveLink: (v: string) => console.log(v)});
 
 export const NavLinkProvider = (props: any) => {
-  const [activeLink, setActiveLink] = useState("Home");
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState("");
+
+  useEffect(()=>{
+    if (location.pathname.includes('crew'))
+      setActiveLink('Crew');
+    else if (location.pathname.includes('destination'))
+      setActiveLink('Destination')
+    else if (location.pathname.includes('technology'))
+      setActiveLink('Technology')
+    else setActiveLink('Home')
+  },[location]);
 
   return (
     <NavLinkContext.Provider value={{ activeLink, setActiveLink }}>
